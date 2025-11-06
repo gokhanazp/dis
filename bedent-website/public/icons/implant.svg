@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+  <!-- İmplant ikonu -->
+  <!-- Diş kısmı (üst) -->
+  <path d="M40 25 L60 25 L65 35 L35 35 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <!-- Vida dişleri -->
+  <line x1="35" y1="40" x2="40" y2="40" stroke="currentColor" stroke-width="2.5"/>
+  <line x1="60" y1="40" x2="65" y2="40" stroke="currentColor" stroke-width="2.5"/>
+  <line x1="35" y1="48" x2="40" y2="48" stroke="currentColor" stroke-width="2.5"/>
+  <line x1="60" y1="48" x2="65" y2="48" stroke="currentColor" stroke-width="2.5"/>
+  <line x1="35" y1="56" x2="40" y2="56" stroke="currentColor" stroke-width="2.5"/>
+  <line x1="60" y1="56" x2="65" y2="56" stroke="currentColor" stroke-width="2.5"/>
+  <!-- Vida gövdesi -->
+  <path d="M40 35 L40 65 L45 70 L55 70 L60 65 L60 35" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <!-- Çizgiler (vida detayı) -->
+  <path d="M42 38 Q50 42 58 38" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M42 46 Q50 50 58 46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M42 54 Q50 58 58 54" fill="none" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+

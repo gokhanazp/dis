@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+  <!-- Ortodonti - Diş + Kalkan ikonu -->
+  <!-- Diş -->
+  <path d="M30 35 C25 35 23 37 23 41 L23 50 C23 58 25 65 30 65 C35 65 37 58 37 50 L37 41 C37 37 35 35 30 35 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+  <!-- Kalkan -->
+  <path d="M50 25 L70 30 L70 50 C70 65 60 75 50 80 C40 75 30 65 30 50 L30 30 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <!-- Onay işareti kalkanın içinde -->
+  <path d="M42 50 L48 56 L62 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
