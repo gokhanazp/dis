@@ -1,0 +1,7 @@
+[00:55:19.971] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/gokhan.yildirim/bedent/bedent-website/app'
+[00:55:19.972] Server  ERROR    ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir '/Users/gokhan.yildirim/bedent/bedent-website/app'
+[00:55:19.973] Server  ERROR    ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir '/Users/gokhan.yildirim/bedent/bedent-website/app'
+[00:55:20.026] Server  ERROR    ⨯ Module not found: Error: Can't resolve 'next-flight-client-entry-loader' in '/Users/gokhan.yildirim/bedent/bedent-website'
+[00:55:20.038] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/gokhan.yildirim/bedent/bedent-website/app'
+[00:55:20.040] Server  ERROR    ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir '/Users/gokhan.yildirim/bedent/bedent-website/app'
+[00:55:20.041] Server  ERROR    ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir '/Users/gokhan.yildirim/bedent/bedent-website/app'

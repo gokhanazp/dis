@@ -4,7 +4,6 @@ services:
     runtime: node
     region: frankfurt
     plan: free
-    rootDir: bedent-website
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
