@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900">
-      {/* Top Bar - Sosyal Medya ve İletişim - Elit Tasarım */}
-      <div className="bg-gradient-to-r from-black via-gray-900 to-black border-b border-gray-800/50">
+      {/* Top Bar - Sosyal Medya ve İletişim - Sadece Desktop */}
+      <div className="hidden lg:block bg-gradient-to-r from-black via-gray-900 to-black border-b border-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex justify-between items-center text-sm">
             {/* Sol - İletişim Bilgileri */}
@@ -37,10 +37,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Header / Navigation - Logo Ortada, Menüler Yanlarda - Elit Tasarım */}
+      {/* Header / Navigation - Responsive */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-black/80 border-b border-gray-800/50 shadow-2xl">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
+          {/* Desktop Navigation - Logo Ortada */}
+          <div className="hidden lg:flex justify-between items-center">
             {/* Sol Menü */}
             <div className="flex space-x-1">
               <a href="#anasayfa" className="group relative px-6 py-3 text-gray-300 hover:text-white transition-all font-medium text-base overflow-hidden rounded-lg">
@@ -53,11 +54,9 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Logo Ortada - Büyük ve Parlak */}
+            {/* Logo Ortada */}
             <div className="flex items-center relative group">
-              {/* Hafif Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
               <Image
                 src="/logo.png"
                 alt="BeDent Logo"
@@ -80,6 +79,83 @@ export default function Home() {
               </a>
               <a href="#iletisim" className="group relative px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold text-base rounded-lg shadow-lg shadow-orange-500/50 hover:shadow-orange-500/70 hover:scale-105 transition-all">
                 <span className="relative z-10">Randevu Al</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Mobile Navigation - Logo Sol, Hamburger Sağ */}
+          <div className="lg:hidden flex justify-between items-center">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="BeDent Logo"
+                width={200}
+                height={150}
+                priority
+                className="h-16 w-auto drop-shadow-[0_0_15px_rgba(249,115,22,0.2)]"
+              />
+            </div>
+
+            {/* Hamburger Menu Button */}
+            <button
+              onClick={() => {
+                const menu = document.getElementById('mobile-menu');
+                if (menu) {
+                  menu.classList.toggle('hidden');
+                }
+              }}
+              className="p-2 rounded-lg bg-gray-800/50 hover:bg-orange-500/20 transition-all"
+            >
+              <svg className="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Mobile Menu - Dropdown */}
+          <div id="mobile-menu" className="hidden lg:hidden mt-4 pb-4 space-y-2">
+            <a href="#anasayfa" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-orange-500/10 rounded-lg transition-all">
+              Anasayfa
+            </a>
+            <a href="#hizmetler" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-orange-500/10 rounded-lg transition-all">
+              Hizmetlerimiz
+            </a>
+            <a href="#hakkimizda" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-orange-500/10 rounded-lg transition-all">
+              Hakkımızda
+            </a>
+            <a href="#hekimlerimiz" className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-orange-500/10 rounded-lg transition-all">
+              Hekimlerimiz
+            </a>
+            <a href="#iletisim" className="block px-4 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold rounded-lg text-center shadow-lg shadow-orange-500/50">
+              Randevu Al
+            </a>
+
+            {/* Mobile - İletişim Bilgileri */}
+            <div className="pt-4 mt-4 border-t border-gray-800 space-y-3">
+              <a href="tel:+902121234567" className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-orange-500 transition-all">
+                <Image src="/icons/phone.svg" alt="Phone" width={16} height={16} style={{filter: 'invert(58%) sepia(85%) saturate(2000%) hue-rotate(0deg) brightness(100%) contrast(101%)'}} />
+                <span className="text-sm">+90 (212) 123 45 67</span>
+              </a>
+              <a href="mailto:info@bedent.com" className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-orange-500 transition-all">
+                <Image src="/icons/mail.svg" alt="Mail" width={16} height={16} style={{filter: 'invert(58%) sepia(85%) saturate(2000%) hue-rotate(0deg) brightness(100%) contrast(101%)'}} />
+                <span className="text-sm">info@bedent.com</span>
+              </a>
+            </div>
+
+            {/* Mobile - Sosyal Medya */}
+            <div className="flex justify-center space-x-4 pt-4">
+              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-orange-500 hover:to-yellow-500 transition-all">
+                <Image src="/icons/facebook.svg" alt="Facebook" width={18} height={18} style={{filter: 'invert(100%)'}} />
+              </a>
+              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-orange-500 hover:to-yellow-500 transition-all">
+                <Image src="/icons/instagram.svg" alt="Instagram" width={18} height={18} style={{filter: 'invert(100%)'}} />
+              </a>
+              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-orange-500 hover:to-yellow-500 transition-all">
+                <Image src="/icons/twitter.svg" alt="Twitter" width={18} height={18} style={{filter: 'invert(100%)'}} />
+              </a>
+              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800/50 hover:bg-gradient-to-br hover:from-orange-500 hover:to-yellow-500 transition-all">
+                <Image src="/icons/linkedin.svg" alt="LinkedIn" width={18} height={18} style={{filter: 'invert(100%)'}} />
               </a>
             </div>
           </div>
